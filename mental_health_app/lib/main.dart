@@ -10,7 +10,52 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
+      home: Scaffold(
+        appBar: AppBar(title: Text("Demo App")),
+        body: ListView(
+          children: [
+            ListTile(
+              title: Text('ROYAL ALBERT HOTEL'),
+              subtitle: Text('231East 95th Street, HK'),
+              isThreeLine: true,
+              leading: ConstrainedBox(
+                constraints: BoxConstraints(
+                  maxHeight: 62,
+                  maxWidth: 62,
+                  minHeight: 42,
+                  minWidth: 42,
+                ),
+                child: Image.network('https://picsum.photos/200',
+                    fit: BoxFit.cover),
+              ),
+              trailing: Icon(Icons.arrow_forward),
+              contentPadding: EdgeInsets.all(5),
+              onTap: () {},
+              onLongPress: () {},
+            ),
+            ListTile(
+              title: Text('RAY NATIONAL PARK'),
+              subtitle: Text('165 South 77th Street, UT'),
+              isThreeLine: true,
+              leading: ConstrainedBox(
+                constraints: BoxConstraints(
+                  maxHeight: 64,
+                  maxWidth: 64,
+                  minHeight: 44,
+                  minWidth: 44,
+                ),
+                child: Image.network('https://picsum.photos/200',
+                    fit: BoxFit.cover),
+              ),
+              trailing: Icon(Icons.arrow_forward),
+              contentPadding: EdgeInsets.all(5),
+              onTap: () {},
+              onLongPress: () {},
+            ),
+          ],
+        ),
+
+        //  theme: ThemeData(
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
@@ -20,9 +65,9 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        //   primarySwatch: Colors.lightGreen),
+        //  home: MyHomePage(title: 'Flutter Demo Home Page'),
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }

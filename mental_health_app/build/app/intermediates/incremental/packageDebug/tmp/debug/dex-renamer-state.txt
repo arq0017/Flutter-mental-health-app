@@ -1,0 +1,4 @@
+#Sun Nov 07 11:59:12 IST 2021
+base.0=D\:\\flutter project\\Flutter-mental-health-app\\mental_health_app\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
